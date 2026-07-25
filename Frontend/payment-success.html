@@ -1,10 +1,10 @@
-﻿?<!DOCTYPE html>
+?<!DOCTYPE html>
 <html lang="en">
 <head>
   <script src="config.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Successful �?" Xyverra Pro</title>
+    <title>Payment Successful ??" Xyverra Pro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -80,11 +80,11 @@
         </div>
         <div class="detail-row">
             <span class="detail-label">Valid Until</span>
-            <span class="detail-value" id="d-expiry">�?"</span>
+            <span class="detail-value" id="d-expiry">??"</span>
         </div>
         <div class="detail-row">
             <span class="detail-label">Transaction Ref</span>
-            <span class="detail-value" id="d-ref" style="font-family:monospace;font-size:0.8rem;color:#94a3b8">�?"</span>
+            <span class="detail-value" id="d-ref" style="font-family:monospace;font-size:0.8rem;color:#94a3b8">??"</span>
         </div>
     </div>
     <a href="dashboard.html" class="btn-primary" id="btn-main" style="display:none;">
@@ -130,7 +130,7 @@ async function verifyPayment() {
             // Decode payment data for display
             try {
                 const pData = JSON.parse(atob(encodedData));
-                document.getElementById('d-ref').textContent = pData.transaction_uuid || '�?"';
+                document.getElementById('d-ref').textContent = pData.transaction_uuid || '??"';
             } catch(_) {}
 
             // Show expiry from response
@@ -148,7 +148,7 @@ async function verifyPayment() {
             showError(data.message || 'Payment verification failed.');
         }
     } catch (err) {
-        // Network error �?" payment was already confirmed by mock-checkout gateway.
+        // Network error ??" payment was already confirmed by mock-checkout gateway.
         // Unlock Pro locally so the user isn't left in a broken state.
         localStorage.setItem('xyverra_is_pro', 'true');
         localStorage.setItem('chatSubscriptionActive', 'true');
@@ -170,7 +170,7 @@ function showSuccess() {
 function showError(msg) {
     document.getElementById('card-title').textContent = 'Verification Failed';
     document.getElementById('card-desc').textContent = msg;
-    document.getElementById('btn-main').textContent = '�?� Back';
+    document.getElementById('btn-main').textContent = '??? Back';
     document.getElementById('btn-main').href = 'javascript:history.back()';
     document.getElementById('btn-main').style.display = 'block';
     document.getElementById('ring-icon').className = 'fas fa-times';

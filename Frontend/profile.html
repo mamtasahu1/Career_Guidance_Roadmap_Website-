@@ -1,4 +1,4 @@
-﻿?<!DOCTYPE html>
+?<!DOCTYPE html>
 <html lang="en">
 <head>
   <script src="config.js"></script>
@@ -13,23 +13,23 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="profile.css">
     <style>
-        /* â�?��,�â�?��,� Toast â�?��,�â�?��,� */
+        /* �????,?�????,? Toast �????,?�????,? */
         #toast-container{position:fixed;top:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:10px;}
         .toast{min-width:240px;max-width:340px;padding:0.85rem 1rem;border-radius:var(--radius-md,10px);color:#fff;font-size:0.88rem;font-weight:600;display:flex;align-items:center;gap:0.55rem;box-shadow:0 8px 24px rgba(0,0,0,0.18);animation:toastIn .25s ease;}
         .toast.success{background:#10b981;}
         .toast.error{background:#ef4444;}
         .toast.info{background:#6366f1;}
         @keyframes toastIn{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:translateX(0);}}
-        /* â�?��,�â�?��,� Section edit pencil â�?��,�â�?��,� */
+        /* �????,?�????,? Section edit pencil �????,?�????,? */
         .pcard-header{position:relative;}
         .section-edit-btn{margin-left:auto;background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:0.9rem;padding:4px 6px;border-radius:6px;transition:.15s;}
         .section-edit-btn:hover{color:var(--primary);background:rgba(99,102,241,0.08);}
-        /* â�?��,�â�?��,� Avatar upload affordance â�?��,�â�?��,� */
+        /* �????,?�????,? Avatar upload affordance �????,?�????,? */
         .profile-avatar-large{position:relative;cursor:pointer;overflow:hidden;}
         .profile-avatar-large img{width:100%;height:100%;object-fit:cover;border-radius:inherit;position:absolute;inset:0;}
         .avatar-upload-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transition:.2s;border-radius:inherit;}
         .profile-avatar-large:hover .avatar-upload-overlay{opacity:1;}
-        /* â�?��,�â�?��,� Multi-select chips in modal â�?��,�â�?��,� */
+        /* �????,?�????,? Multi-select chips in modal �????,?�????,? */
         .chip-select{display:flex;flex-wrap:wrap;gap:0.5rem;}
         .chip-option{padding:0.4rem 0.8rem;border-radius:999px;border:1.5px solid var(--border,#e2e8f0);background:transparent;color:var(--text-muted);cursor:pointer;font-size:0.82rem;font-weight:600;transition:.15s;}
         .chip-option.selected{background:var(--primary);border-color:var(--primary);color:#fff;}
