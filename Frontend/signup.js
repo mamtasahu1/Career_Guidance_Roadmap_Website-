@@ -308,6 +308,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             } else {
                                 window.XySuccess("Verification", "Verification code sent to your email!");
                                 startResendTimer();
+                                if (otpData._dev_otp) {
+                                    setTimeout(() => {
+                                        otpCodeInput.value = otpData._dev_otp;
+                                        window.XySuccess("Demo Mode", "Code auto-filled because you are not using a custom domain");
+                                    }, 1000);
+                                }
                             }
                         } catch (err) {
                             showFieldError(otpCodeInput, otpError, 'Network error while sending OTP.');
@@ -429,6 +435,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         window.XySuccess("Code Sent", "A new verification code has been sent.");
                         clearFieldError(otpCodeInput, otpError);
                         startResendTimer();
+                        if (data._dev_otp) {
+                            setTimeout(() => {
+                                otpCodeInput.value = data._dev_otp;
+                                window.XySuccess("Demo Mode", "Code auto-filled because you are not using a custom domain");
+                            }, 1000);
+                        }
                     } else {
                         showFieldError(otpCodeInput, otpError, data.message || 'Failed to resend code');
                         btnResendOtp.disabled = false;

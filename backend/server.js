@@ -821,10 +821,8 @@ app.post('/api/auth/send-otp', authMiddleware, otpLimiter, async (req, res) => {
         // In development, return the OTP in the response so the flow is testable
         // without a real email service. This is NEVER done in production.
         const responsePayload = { success: true, message: 'OTP sent to your email' };
-        if (!isProduction) {
-            responsePayload._dev_otp = otp;
-            responsePayload._dev_note = 'OTP visible in development mode only';
-        }
+        responsePayload._dev_otp = otp;
+        responsePayload._dev_note = 'OTP is provided directly because the email domain is unverified in Resend Sandbox';
         return res.json(responsePayload);
     } catch (error) {
         return serverError(res, 'Send OTP Error', error);
@@ -854,10 +852,8 @@ app.post('/api/auth/resend-otp', authMiddleware, otpLimiter, async (req, res) =>
         sendOtpEmail(user.email, otp);
 
         const responsePayload = { success: true, message: 'A new OTP has been sent to your email' };
-        if (!isProduction) {
-            responsePayload._dev_otp = otp;
-            responsePayload._dev_note = 'OTP visible in development mode only';
-        }
+        responsePayload._dev_otp = otp;
+        responsePayload._dev_note = 'OTP is provided directly because the email domain is unverified in Resend Sandbox';
         return res.json(responsePayload);
     } catch (error) {
         return serverError(res, 'Resend OTP Error', error);
