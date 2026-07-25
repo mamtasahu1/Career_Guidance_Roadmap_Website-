@@ -170,7 +170,7 @@ function showSuccess() {
 function showError(msg) {
     document.getElementById('card-title').textContent = 'Verification Failed';
     document.getElementById('card-desc').textContent = msg;
-    document.getElementById('btn-main').textContent = '??? Back';
+    document.getElementById('btn-main').textContent = '← Back';
     document.getElementById('btn-main').href = 'javascript:history.back()';
     document.getElementById('btn-main').style.display = 'block';
     document.getElementById('ring-icon').className = 'fas fa-times';
@@ -183,5 +183,6 @@ verifyPayment();
 </script>
 </body>
 </html>
+
 
 
