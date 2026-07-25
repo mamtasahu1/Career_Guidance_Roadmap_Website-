@@ -4,7 +4,7 @@
   <script src="config.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payment Failed ??" Xyverra</title>
+    <title>Payment Failed" Xyverra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -81,13 +81,13 @@
 
     <p class="support-note">
         If the problem persists, please <a href="mailto:support@xyverra.com">contact our support team</a>.
-        <br>Transaction reference: <span id="txn-ref" style="font-family:monospace">??"</span>
+        <br>Transaction reference: <span id="txn-ref" style="font-family:monospace">-</span>
     </p>
 </div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const refId = params.get('ref') || params.get('transaction_uuid') || '??"';
+const refId = params.get('ref') || params.get('transaction_uuid') || '-';
 document.getElementById('txn-ref').textContent = refId;
 </script>
 </body>

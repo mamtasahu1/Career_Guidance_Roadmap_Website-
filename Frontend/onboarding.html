@@ -593,18 +593,18 @@
                     <div class="ob-form-group">
                         <label for="timeline-input">When do you want to be job-ready?</label>
                         <select class="ob-input" id="timeline-input">
-                            <option value="1-3 months">1 ??" 3 months</option>
-                            <option value="3-6 months" selected>3 ??" 6 months</option>
-                            <option value="6-12 months">6 ??" 12 months</option>
+                            <option value="1-3 months">1 - 3 months</option>
+                            <option value="3-6 months" selected>3 - 6 months</option>
+                            <option value="6-12 months">6 - 12 months</option>
                             <option value="1+ year">1+ year</option>
                         </select>
                     </div>
                     <div class="ob-form-group">
                         <label for="hours-input">How many hours per week can you dedicate to learning?</label>
                         <select class="ob-input" id="hours-input">
-                            <option value="1-5">1 ??" 5 hours / week</option>
-                            <option value="5-10" selected>5 ??" 10 hours / week</option>
-                            <option value="10-20">10 ??" 20 hours / week</option>
+                            <option value="1-5">1 - 5 hours / week</option>
+                            <option value="5-10" selected>5 - 10 hours / week</option>
+                            <option value="10-20">10 - 20 hours / week</option>
                             <option value="20+">20+ hours / week (Full-time)</option>
                         </select>
                     </div>
@@ -745,7 +745,7 @@
             const timeline = document.getElementById('timeline-input').value;
             const hours = document.getElementById('hours-input').value;
 
-            // Interest ??' path mapping (matches roadmap.js ROADMAP_DATA keys)
+            // Interest ' path mapping (matches roadmap.js ROADMAP_DATA keys)
             const INTEREST_TO_PATH = {
                 'Web Development': 'Web Development',
                 'Full Stack Development': 'Full Stack Development',
@@ -807,7 +807,7 @@
                         }
                     }
                 } catch (err) {
-                    // Server offline ??" data already saved to localStorage
+                    // Server offline - data already saved to localStorage
                     console.warn('Could not reach backend, onboarding saved locally only.');
                 }
             }

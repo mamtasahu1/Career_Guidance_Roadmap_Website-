@@ -177,7 +177,7 @@
         }
 
         // ✨ Check completion status on load: localStorage first (instant),
-        //    then the backend (authoritative ??" survives logout/new device) ✨
+        //    then the backend (authoritative - survives logout/new device) ✨
         function isCompletedLocally() {
             try {
                 const arr = JSON.parse(localStorage.getItem('completedCourses') || '[]');
@@ -253,8 +253,8 @@
 
         // ✨ Persist lesson completion to the backend ✨
         // Two separate, complementary writes:
-        //  1. mark-viewed  ??' whole-module "studied" status (Progress + User.studiedLessons) ??" unchanged, existing behaviour
-        //  2. mark-lesson-complete ??' THIS specific lesson, permanently, in User.completedLessons
+        //  1. mark-viewed  ' whole-module "studied" status (Progress + User.studiedLessons) - unchanged, existing behaviour
+        //  2. mark-lesson-complete ' THIS specific lesson, permanently, in User.completedLessons
         //     (this is what lets the button correctly show "Completed" on every future visit)
         async function reportModuleStudied() {
             const token = localStorage.getItem('token') || sessionStorage.getItem('token');

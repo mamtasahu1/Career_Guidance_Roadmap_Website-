@@ -304,7 +304,7 @@
                 <span class="amount">$3.73</span>
                 <span class="period">/month</span>
             </div>
-            <div class="plan-price-npr">??^ <strong>NPR 500</strong> per month � Billed via eSewa</div>
+            <div class="plan-price-npr"> <strong>NPR 500</strong> per month � Billed via eSewa</div>
             <div class="plan-divider"></div>
             <ul class="plan-features">
                 <li><i class="fas fa-check icon"></i> Everything in Free</li>
@@ -317,7 +317,7 @@
                 <li><i class="fas fa-check icon"></i> Email progress reports</li>
             </ul>
             <button class="btn-primary" id="btn-upgrade" onclick="initiatePayment()">
-                <i class="fas fa-crown"></i> Upgrade Now ??" $3.73 (NPR 500)
+                <i class="fas fa-crown"></i> Upgrade Now" $3.73 (NPR 500)
             </button>
             <p style="text-align:center;color:var(--slate-400);font-size:0.78rem;margin-top:1rem;">
                 Powered by eSewa � Secure Payment
@@ -325,7 +325,7 @@
         </div>
     </div>
 
-    <!-- eSewa hidden form ??" submitted programmatically -->
+    <!-- eSewa hidden form - submitted programmatically -->
     <form id="esewa-form" action="" method="POST">
         <input type="hidden" name="amount" id="f-amount" />
         <input type="hidden" name="tax_amount" value="0" />
@@ -378,7 +378,7 @@
 </div>
 
 <script>
-const API = 'http://localhost:5000';
+const API = window.XYVERRA_API_BASE || 'http://localhost:5000';
 
 function getToken() {
     return localStorage.getItem('token') || sessionStorage.getItem('token');
