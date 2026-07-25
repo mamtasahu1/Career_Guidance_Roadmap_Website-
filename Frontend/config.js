@@ -14,3 +14,7 @@ window.XYVERRA_CONFIG = {
 
 // Convenience getter used by all JS files
 window.XYVERRA_API_BASE = window.XYVERRA_CONFIG.API_BASE;
+window.XYVERRA_CONFIG = {
+  API_BASE: "https://career-guidance-roadmap-website.onrender.com" // ← your Render URL
+};
+
